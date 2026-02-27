@@ -1,218 +1,219 @@
-# Data-Cleaning-Tool-for-SLM-Models
+# 🧹 Data-Cleaning-Tool-for-SLM-Models  
+### *A High-Performance Text Preprocessing Pipeline for Small Language Models*
 
-# 🧹 Data Cleaning Pipeline for Training SLM (Small Language Model)
+The **Data Cleaning Pipeline for SLM Models** is a powerful Python-based system designed to transform raw, noisy text data into **clean, structured, and model-ready datasets**. Built with a focus on **NLP and AI workflows**, this pipeline ensures that your data is optimized for training **Small Language Models (SLMs)**, chatbots, and other intelligent systems.
 
-### Advanced Text Preprocessing & Noise Removal System in Python
+Raw text from sources like web scraping often contains inconsistencies such as HTML tags, special characters, and irrelevant noise. This project eliminates those issues and delivers **high-quality, normalized text** ready for machine learning.
 
 ---
 
-## 📌 Overview
+<p align="center">
+  <strong>⚡ CleanText Pipeline</strong><br/>
+  <em>From Raw Noise → Intelligent Data</em>
+</p>
 
-This project focuses on building a **robust text cleaning and preprocessing pipeline** designed specifically for preparing high-quality datasets for training **Small Language Models (SLMs)**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python"/>
+  <img src="https://img.shields.io/badge/NLP-Preprocessing-green?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Regex-Cleaning-orange?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Lightweight-Fast-lightgrey?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"/>
+</p>
 
-Raw text collected from sources like web scraping often contains:
+---
 
-* ❌ Noise
-* ❌ Special characters
-* ❌ HTML tags
-* ❌ Irrelevant symbols
+## 📋 Table of Contents
 
-This system transforms such raw data into **clean, structured, and model-ready text**.
+- [Overview](#-overview)
+- [Objectives](#-objectives)
+- [Key Features](#-key-features)
+- [Technology Stack](#-technology-stack)
+- [Pipeline Architecture](#-pipeline-architecture)
+- [Core Processing Steps](#-core-processing-steps)
+- [Workflow](#-workflow)
+- [Project Structure](#-project-structure)
+- [How to Run](#-how-to-run)
+- [Use Cases](#-use-cases)
+- [Future Enhancements](#-future-enhancements)
+
+---
+
+## 🌟 Overview
+
+This project focuses on building a **robust and reusable text preprocessing pipeline** tailored for AI and NLP applications.
+
+It solves a critical problem in machine learning:
+
+> ❗ *“Garbage in → Garbage out”*
+
+By cleaning and normalizing raw datasets, this system ensures:
+
+- High-quality training data  
+- Reduced noise and redundancy  
+- Improved model accuracy  
+- Consistent and structured input  
 
 ---
 
 ## 🎯 Objectives
 
-* Remove unwanted characters and noise from text
-* Normalize and standardize textual data
-* Improve dataset quality for ML/NLP training
-* Build a reusable preprocessing pipeline
+- 🧹 Remove unwanted noise and symbols  
+- 🔤 Normalize and standardize text  
+- 🧠 Improve dataset quality for NLP models  
+- 🔁 Build a reusable preprocessing pipeline  
+- ⚡ Optimize data for SLM training  
 
 ---
 
-## 🚀 Key Features
+## ✨ Key Features
 
-### 🧹 Advanced Text Cleaning
-
-* Removes:
-
-  * Special characters
-  * HTML tags
-  * URLs
-  * Emails
-* Filters unwanted symbols using regex
+| Feature | Description |
+|--------|------------|
+| 🧹 **Advanced Cleaning** | Removes HTML tags, URLs, emails, and unwanted characters |
+| 🔤 **Text Normalization** | Converts text to lowercase and standardizes encoding |
+| 🧠 **Smart Filtering** | Eliminates short, repetitive, and low-quality text |
+| ⚡ **Efficient Processing** | Lightweight and fast pipeline using Python |
+| 🤖 **Model-Ready Output** | Clean text suitable for NLP, chatbots, and SLM training |
 
 ---
 
-### 🔤 Text Normalization
+## 🛠 Technology Stack
 
-* Converts text to lowercase
-* Removes extra whitespace
-* Standardizes encoding (ASCII normalization)
-
----
-
-### 🧠 Smart Filtering
-
-* Removes:
-
-  * Very short sentences
-  * Repetitive/noisy text
-  * Low-quality data
+| Component | Technology | Purpose |
+|----------|-----------|--------|
+| **Language** | Python 3.x | Core processing logic |
+| **Regex Engine** | `re` | Pattern-based text cleaning |
+| **Unicode Handling** | `unicodedata` | Text normalization |
+| **Utilities** | `string` | Character filtering |
+| **Optional NLP** | `nltk` | Tokenization & advanced preprocessing |
 
 ---
 
-### ⚡ Model-Ready Output
+## 🏗 Pipeline Architecture
 
-* Produces clean text suitable for:
-
-  * NLP models
-  * SLM training
-  * Chatbots
-
----
-
-## 🏗️ Project Structure
-
-```id="cleanstruct"
-Data-Cleaning-SLM/
-│
-├── cleaning_script.py        # Core cleaning logic
-├── input_data.txt            # Raw dataset
-├── cleaned_output.txt        # Processed dataset
+```
+Raw Data → Cleaning → Normalization → Filtering → Clean Dataset
 ```
 
----
+### Processing Layers
 
-## 🖥️ Tech Stack
-
-### 🐍 Language
-
-* Python
-
-### 📦 Libraries Used
-
-* `re` → Regular expressions for cleaning
-* `unicodedata` → Text normalization
-* `string` → Character handling
-* (Optional) `nltk` → Tokenization
+1. **Input Layer** → Raw text ingestion  
+2. **Cleaning Layer** → Noise & unwanted data removal  
+3. **Normalization Layer** → Standardization of text  
+4. **Filtering Layer** → Quality-based data filtering  
+5. **Output Layer** → Clean dataset ready for ML  
 
 ---
 
-## 🔄 Working Pipeline
+## 📜 Core Processing Steps
 
-```id="cleanflow"
-1. Load raw text data
+### 🧹 Remove HTML Tags
+- Strips `<tags>` and markup content  
+
+### 🌐 Remove URLs & Emails
+- Eliminates hyperlinks and email patterns  
+
+### 🔤 Normalize Text
+- Unicode → ASCII conversion  
+- Lowercase transformation  
+
+### ⚙ Regex-Based Cleaning
+- Removes special characters and symbols  
+
+### 🧠 Smart Filtering
+- Removes:
+  - Very short sentences  
+  - Repetitive/noisy text  
+  - Low-quality content  
+
+---
+
+## 🔄 Workflow
+
+```
+1. Load raw text dataset
 2. Remove HTML tags
 3. Remove URLs and emails
 4. Normalize unicode characters
-5. Remove special symbols
-6. Convert to lowercase
-7. Remove extra spaces
+5. Clean special characters
+6. Convert text to lowercase
+7. Remove extra whitespace
 8. Filter low-quality text
-9. Save cleaned output
+9. Save cleaned dataset
 ```
 
 ---
 
-## 📜 Core Logic Explained
+## 📁 Project Structure
 
-### 📌 Step 1: Remove HTML Tags
-
-* Strips `<tags>` from raw text
-
----
-
-### 📌 Step 2: Remove URLs & Emails
-
-* Cleans hyperlinks and email patterns
-
----
-
-### 📌 Step 3: Normalize Text
-
-* Converts Unicode → ASCII
-* Ensures consistent encoding
-
----
-
-### 📌 Step 4: Regex Cleaning
-
-* Removes unwanted characters using patterns
-
----
-
-### 📌 Step 5: Filtering
-
-* Keeps only meaningful sentences
-* Removes noise and junk data
+```
+Data-Cleaning-SLM/
+│
+├── cleaning_script.py        # Core preprocessing pipeline
+├── input_data.txt            # Raw input dataset
+├── cleaned_output.txt        # Final cleaned output
+```
 
 ---
 
 ## ⚡ How to Run
 
-### 1️⃣ Install Dependencies (if any)
+### Prerequisites
+- Python 3.x installed  
 
-```bash id="instclean"
+---
+
+### 1️⃣ Install Dependencies (Optional)
+```bash
 pip install nltk
 ```
 
----
-
-### 2️⃣ Run Script
-
-```bash id="runclean"
+### 2️⃣ Run the Script
+```bash
 python cleaning_script.py
 ```
 
----
-
-### 3️⃣ Output
-
-* Cleaned text will be saved in:
-
-```id="outclean"
+### 3️⃣ Output File
+```
 cleaned_output.txt
 ```
 
 ---
 
-## 📊 Use Cases
+## 🎯 Use Cases
 
-* 🧠 Training Small Language Models (SLM)
-* 🤖 Chatbot dataset preparation
-* 📄 NLP preprocessing pipelines
-* 🔍 Data cleaning for research
-* 🌐 Web scraped data processing
+- 🧠 Training Small Language Models (SLMs)  
+- 🤖 Chatbot dataset preparation  
+- 📄 NLP preprocessing pipelines  
+- 🔍 Research data cleaning  
+- 🌐 Web scraped data processing  
 
 ---
 
 ## 🌟 Highlights
 
-✔ Clean and reusable pipeline
-✔ Focused on NLP/AI use cases
-✔ Handles real-world noisy data
-✔ Easy to extend and customize
-✔ Lightweight and efficient
+✔ Lightweight and fast pipeline  
+✔ Designed for real-world noisy datasets  
+✔ Easy to extend and customize  
+✔ Focused on AI/NLP workflows  
+✔ Clean, modular implementation  
 
 ---
 
-## 🧩 Future Enhancements
+## 🔮 Future Enhancements
 
-* 🧠 Add stopword removal
-* 📊 Add tokenization & lemmatization
-* 🌐 Integrate with web crawlers
-* ⚡ Batch processing for large datasets
-* 🤖 Direct pipeline for model training
+- 🧠 Stopword removal integration  
+- 📊 Tokenization & lemmatization  
+- 🌐 Integration with web scraping tools  
+- ⚡ Batch processing for large datasets  
+- 🤖 Direct ML pipeline integration  
 
 ---
 
 ## 👨‍💻 Author
 
-**Vaibhav Sharma**
-
-* AI & Data Enthusiast
-* Focused on building intelligent data pipelines
+**Vaibhav Sharma**  
+*AI Developer | Data Pipeline Engineer*
 
 ---
 
@@ -224,7 +225,13 @@ This project is licensed under the **MIT License**.
 
 ## 💡 Final Note
 
-High-quality data is the backbone of any AI model.
-This project ensures your dataset is **clean, consistent, and ready for training powerful language models 🚀**
+> **High-quality data is the foundation of powerful AI systems.**
+
+This project ensures your dataset is **clean, consistent, and optimized** for training intelligent models 🚀
 
 ---
+
+<p align="center">
+  Built with ❤️ using Python & NLP techniques<br/>
+  <strong>CleanText Pipeline</strong> — Powering Smarter AI Models
+</p>
